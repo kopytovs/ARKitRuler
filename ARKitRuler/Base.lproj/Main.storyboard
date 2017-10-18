@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13528" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13526"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ARKitRuler" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EfT-9g-i17">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Os-Zq-67D">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91D-Pd-IfI">
+                                <rect key="frame" x="0.0" y="600" width="375" height="67"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="cQj-PY-Oqe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="focus_off" translatesAutoresizingMaskIntoConstraints="NO" id="cvT-du-Fpm">
+                                <rect key="frame" x="172" y="318" width="30" height="30"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cvT-du-Fpm" firstAttribute="centerX" secondItem="91D-Pd-IfI" secondAttribute="centerX" id="57t-tX-7rW"/>
+                            <constraint firstItem="0Os-Zq-67D" firstAttribute="bottom" secondItem="55s-DT-bcS" secondAttribute="bottom" id="Hrh-DE-13c"/>
+                            <constraint firstItem="0Os-Zq-67D" firstAttribute="centerY" secondItem="cvT-du-Fpm" secondAttribute="centerY" id="J25-hq-dA1"/>
+                            <constraint firstItem="0Os-Zq-67D" firstAttribute="leading" secondItem="EfT-9g-i17" secondAttribute="leading" id="Qek-jb-gtS"/>
+                            <constraint firstItem="cvT-du-Fpm" firstAttribute="leading" secondItem="55s-DT-bcS" secondAttribute="leading" constant="172" id="Qtk-Nw-Bg5"/>
+                            <constraint firstItem="0Os-Zq-67D" firstAttribute="trailing" secondItem="91D-Pd-IfI" secondAttribute="trailing" id="SDj-i8-jZT"/>
+                            <constraint firstItem="0Os-Zq-67D" firstAttribute="bottom" secondItem="91D-Pd-IfI" secondAttribute="bottom" id="f2R-bB-4zq"/>
+                            <constraint firstItem="cvT-du-Fpm" firstAttribute="top" secondItem="55s-DT-bcS" secondAttribute="top" constant="298" id="hmY-Xh-OOg"/>
+                            <constraint firstItem="0Os-Zq-67D" firstAttribute="top" secondItem="EfT-9g-i17" secondAttribute="top" id="hwO-ft-zKd"/>
+                            <constraint firstAttribute="trailing" secondItem="0Os-Zq-67D" secondAttribute="trailing" id="wQg-Xn-de0"/>
+                            <constraint firstItem="0Os-Zq-67D" firstAttribute="leading" secondItem="91D-Pd-IfI" secondAttribute="leading" id="wo7-e2-7ld"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="55s-DT-bcS"/>
+                    </view>
+                    <connections>
+                        <outlet property="focus" destination="cvT-du-Fpm" id="jqs-wd-VVK"/>
+                        <outlet property="sceneView" destination="0Os-Zq-67D" id="FQo-uM-t9W"/>
+                        <outlet property="textLabel" destination="91D-Pd-IfI" id="GwW-hf-i9l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="focus_off" width="26" height="26"/>
+    </resources>
+</document>
